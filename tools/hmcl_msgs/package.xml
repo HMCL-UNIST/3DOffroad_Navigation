@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hmcl_msgs</name>
+  <version>1.13.0</version>
+  <description>The hmcl_msgs package</description>
+  <maintainer email="hojinlee@unist.ac.kr">Hojin Lee</maintainer>
+  <license>Apache 2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+
+  <depend>geometry_msgs</depend>  
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <exec_depend>message_runtime</exec_depend>
+</package>

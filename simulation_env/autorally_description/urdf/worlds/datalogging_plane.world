@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <gui>
+      <camera name="user_camera">
+        <pose frame=''>-14.5786 -15.2753 10.6425 0 0.579643 0.800194</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <ambient>1.0 1.0 1.0 1.0</ambient>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://urdf/models/sun</uri>
+    </include>
+
+  
+<include>      
+      <name>hardplane</name>
+      <uri>model://urdf/models/hardplane</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+ <include>
+      <name>dirt_plane</name>      
+      <uri>model://urdf/models/dirt_plane</uri>            
+      <pose>129 0 0 0 0 0</pose>
+    </include>
+
+
+   
+   
+  </world>
+</sdf>

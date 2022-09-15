@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="heightmap5">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <heightmap>
+              <uri>model://urdf/models/track3dv5/heightv5.png</uri>
+              <size>65 65 2</size>
+              <pos>0 0 -0.1</pos>
+            </heightmap>
+          </geometry>
+          <surface>
+          <friction>
+            <ode>
+              <mu>50</mu>
+              <mu2>30</mu2>
+            </ode>
+          </friction>
+        </surface>
+        </collision>
+        <visual name="visual_abcedf">
+          <geometry>
+            <heightmap>
+              <use_terrain_paging>false</use_terrain_paging>
+               <texture>
+                <diffuse>file://media/materials/textures/grass_diffusespecular.png</diffuse>
+                <normal>file://media/materials/textures/flat_normal.png</normal>
+                <size>1</size>
+               </texture>
+              <uri>model://urdf/models/track3dv5/heightv5.png</uri>
+              <size>65 65 2</size>
+              <pos>0 0 -0.1</pos>
+            </heightmap>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+
+  
+  
+  
+<!--   
+  <model name="dirt_plane">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>90 90</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>90 90</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://urdf/gazebo.material</uri>
+            <name>Gazebo/Texture_blend</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model> -->
+</sdf>

@@ -1,0 +1,27 @@
+<launch>
+  
+  <node name="joy_node" pkg="joy" type="joy_node" output="screen" machine="autorally-ocs">
+    <param name="dev" value="$(optenv AR_JOYSTICK /dev/input/js0)" />
+    <param name="deadzone" value="0.01" />
+    <param name="autorepeat_rate" value="10" />
+    <param name="coalesce_interval" value="0.01" />
+  </node>
+
+  <node name="joystickController" pkg="autorally_control" type="joystickController" output="screen" machine="autorally-ocs">
+    <param name="throttleDamping" value="1.0" />
+    <param name="steeringDamping" value="1.0" />
+    <param name="throttleAxis" value="1" />
+    <param name="steeringAxis" value="3" />
+    <rosparam param="runstopToggleButtons">[0, 1, 2, 3]</rosparam>
+    <param name="safeSpeedIncButton" value="0" />
+    <param name="safeSpeedDecButton" value="3" />
+    <param name="safeSpeedZeroButton1" value="1" />
+    <param name="safeSpeedZeroButton2" value="2" />
+    <param name="throttleEnableButton" value="4" />
+    <param name="steeringEnableButton" value="5" />
+
+    <param name="brakeAxis" value="2" />
+    <remap from="/safeSpeed" to="/targetSpeed" />
+  </node>
+
+</launch>

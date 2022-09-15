@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="gptrajpredict" type="main_node.py" name="gptrajpredict_node" output="screen">        
+    </node>
+    
+    
+</launch>

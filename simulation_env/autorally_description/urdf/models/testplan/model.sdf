@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="testplan">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://urdf/cad/TestPlane1.STL</uri>
+            <scale>0.7 0.3 0.7</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>50</mu>
+              <mu2>30</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <mesh>            
+            <uri>model://urdf/cad/TestPlane1.STL</uri>
+            <scale>0.7 0.3 0.7</scale>
+          </mesh>
+        </geometry>      
+        <material>
+          <script>
+            <uri>model://urdf/gazebo.material</uri>
+            <name>Gazebo/Grass_image</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

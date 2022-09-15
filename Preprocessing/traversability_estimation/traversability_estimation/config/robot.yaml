@@ -1,0 +1,19 @@
+submap_service: "/elevation_mapping/get_submap"
+map_frame_id: "map"     # Must be the same as the input elevation submap.
+#robot_frame_id: "base_footprint"
+robot_frame_id: "base_link"
+min_update_rate: 3.0 #0.2
+map_center_x: 0.0
+map_center_y: 0.0
+map_length_x: 20.0
+map_length_y: 20.0
+footprint_yaw: 0.7854
+max_gap_width: 0.3
+grid_map_to_initialize_traversability_map:
+  enable: true
+  grid_map_topic_name: /elevation_mapping/elevation_map
+image_topic: /left_camera/image_raw
+global_map_size: 100.0
+# image_topic: /erfnet_ros/semantic_mask
+#image_topic: /pylon_camera_node/image_rect_color
+add_terrain_type_cost: 0.0

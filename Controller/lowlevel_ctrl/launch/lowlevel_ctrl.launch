@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+
+  <node name="lowlevel_ctrl" pkg="lowlevel_ctrl" type="lowlevel_ctrl" output="screen">      
+  </node>
+  
+</launch>

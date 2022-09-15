@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <ambient>1.0 1.0 1.0 1.0</ambient>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://urdf/models/sun</uri>
+    </include>
+    <!-- <include>
+      <name>track</name>
+      <uri>model://urdf/models/track</uri>
+      <pose>0 0 0.0762 0 0 0.785398</pose>
+    </include> -->
+    <!-- A ground plane -->
+    <include>
+      <name>blended_plane</name>
+      <!-- <uri>model://urdf/models/blended_track</uri>       -->
+      <uri>model://urdf/models/grass_plane</uri>            
+      <!-- <pose>0 0 0 0 0.3491 0</pose> -->
+      <!-- <pose>0 0 0 0 0.1745 0</pose> -->
+      <!-- <pose>0 0 0 0 0.08727 0</pose> -->
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <physics name='default_physics' default='0' type='ode'>
+<!--  the max step size is set to 0.001 by default. -->
+<!--  When increasing it, the simulation quality may suffer. -->
+      <!-- <max_step_size>0.002</max_step_size> -->
+<!--  this factor actually is computed by multiplying the other two -->
+      <!-- <real_time_factor>0.6</real_time_factor>
+      <real_time_update_rate>300</real_time_update_rate> -->
+    </physics>
+  </world>
+</sdf>

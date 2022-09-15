@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <node pkg="gplogger" type="traj_recorder_node.py" name="gplogger_node" output="screen">        
+    </node>
+    
+    
+</launch>
