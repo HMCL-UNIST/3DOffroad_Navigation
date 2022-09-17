@@ -5,7 +5,7 @@
 
 
 <p align='center'>
-    <img src="/jpg/hojin1.jpg" alt="drawing" width="800"/>
+    <img src="/jpg/hojin1.jpg" alt="drawing" width="250"/>
 </p>
 
 ## System architecture
