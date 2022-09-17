@@ -6,7 +6,7 @@
 
 <p align='center'>
     <img src="/jpg/gpmppi3.gif" alt="drawing" width="400"/>
-    <img src="/jpg/hojin1.jpg" alt="drawing" width="200"/>
+    <img src="/jpg/hojin1.jpg" alt="drawing" width="400"/>
 </p>
 
 
