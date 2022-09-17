@@ -91,20 +91,30 @@ Hojin Lee, Junsung Kwon, and Cheolhyeon Kwon, Learning-based Uncertainty-aware N
 
 ## Acknowledgement
 I would like to express my sincere thanks to following
+
+** Our 3D Simulation environment and the Gazebo vehicle model is based on Autorally research platform  **
+- 
 ```
-- Our 3D Simulation environment and the Gazebo vehicle model is based on Autorally research platform  (Goldfain, Brian, et al. "Autorally: An open platform for aggressive autonomous driving." IEEE Control Systems Magazine 39.1 (2019): 26-55.)  
+(Goldfain, Brian, et al. "Autorally: An open platform for aggressive autonomous driving." IEEE Control Systems Magazine 39.1 (2019): 26-55.)  
 ```
 
+** Elevation and traversability mapping modules used in preprocessing step are based on these awesome work.  **
 ```
-- Elevation and traversability mapping modules used in preprocessing step are based on these awesome work. 
-      ( P. Fankhauser, M. Bloesch, C. Gehring, M. Hutter, and R. Siegwart,
+( P. Fankhauser, M. Bloesch, C. Gehring, M. Hutter, and R. Siegwart,
         “Robot-centric elevation mapping with uncertainty estimates,” in Mobile
           Service Robotics. World Scientific, 2014, pp. 433–440.) 
-          (P. Fankhauser, M. Bloesch, and M. Hutter, “Probabilistic terrain
-          mapping for mobile robots with uncertain localization,” IEEE Robotics
-          and Automation Letters, vol. 3, no. 4, pp. 3019–3026, 2018.) 
-      (T. H. Y. Leung, D. Ignatyev, and A. Zolotas, “Hybrid terrain
+```       
+
+```
+(P. Fankhauser, M. Bloesch, and M. Hutter, “Probabilistic terrain
+mapping for mobile robots with uncertain localization,” IEEE Robotics
+and Automation Letters, vol. 3, no. 4, pp. 3019–3026, 2018.) 
+```
+
+
+``` 
+(T. H. Y. Leung, D. Ignatyev, and A. Zolotas, “Hybrid terrain
 traversability analysis in off-road environments,” in 2022 8th International
 Conference on Automation, Robotics and Applications (ICARA).
 IEEE, 2022, pp. 50–56.)
- ```
+```
