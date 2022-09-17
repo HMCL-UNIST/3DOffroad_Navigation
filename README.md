@@ -59,9 +59,11 @@ Record state history for GP model.
     roslaunch gplogger gplogger.launch
     roslaunch lowlevel_ctrl lowlevel_ctrl.launch
   ```
-To enable data logging  
+
+*To enable data logging*
 1. publish topic  /gp_data_logging as "true" 
-To Save data   
+
+*To save data *
 2. publish topic  /gp_data_save as "true" 
 
 
