@@ -24,11 +24,19 @@ traversability cost for path evaluation. The navigation path is then designed to
 ## Dependency
 
 Tested with ROS Melodic. 
-  ```
-  sudo apt-get install -y ros-kinetic-navigation
-  sudo apt-get install -y ros-kinetic-robot-localization
-  sudo apt-get install -y ros-kinetic-robot-state-publisher
-  ```
+
+1. To install Gazebo simulation environment
+->  Please follow the installation tutorial in "https://github.com/AutoRally/autorally.git" for Gazebo
+2. For Mapping modules 
+-> Dependencis can be found at "https://github.com/leggedrobotics/traversability_estimation.git"
+3. NVIDIA Graphic card and Gpytorch is required 
+```
+pip install gpytorch
+```
+4. pytorch is required 
+-> https://pytorch.org/get-started/locally/
+
+
 
 ## Install
 
