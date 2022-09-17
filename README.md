@@ -26,7 +26,7 @@ traversability cost for path evaluation. The navigation path is then designed to
 Tested with ROS Melodic. 
 
 1. To install Gazebo simulation environment
-->  Please follow the installation tutorial in "https://github.com/AutoRally/autorally.git" for Gazebo
+->  Please follow the installation tutorial in "https://github.com/AutoRally/autorally.git" 
 2. For Mapping modules 
 -> Dependencis can be found at "https://github.com/leggedrobotics/traversability_estimation.git"
 3. NVIDIA Graphic card and Gpytorch is required 
