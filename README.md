@@ -1,4 +1,4 @@
-# learning based uncertainty-aware 3D offroad navigation
+# Learning-based Uncertainty-aware 3D Offroad Navigation
 
 **A safe, efficient, and agile ground vehicle navigation algorithm for 3D off-road terrain environments. A video of the demonstration of the method can be found on [YouTube](https://www.youtube.com/watch).**
 
