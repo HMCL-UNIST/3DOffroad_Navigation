@@ -61,10 +61,10 @@ Record state history for GP model.
   ```
 
 *To enable data logging*
-1. publish topic  /gp_data_logging as "true" 
+- 1. publish topic  /gp_data_logging as "true" 
 
 *To save data *
-2. publish topic  /gp_data_save as "true" 
+- 2. publish topic  /gp_data_save as "true" 
 
 
 ## Run the package
