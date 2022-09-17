@@ -6,11 +6,12 @@
 
 <p align='center'>
     <img src="/jpg/gpmppi3.gif" alt="drawing" width="400"/>
+    <img src="/jpg/hojin1.gif" alt="drawing" width="200"/>
 </p>
 
 ## System architecture
 <p align='center'>
-    <img src="/jpg/hojin2.jpg" alt="drawing" width="800"/>
+    <img src="/jpg/hojin2.jpg" alt="drawing" width="1000"/>
 </p>
 
 
