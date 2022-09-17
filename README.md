@@ -50,7 +50,7 @@ catkin build
 ```
 
 ## Record vehicle state data for GP model 
-Record state history for estimating vehicle-terrain intercation GP model. 
+Record state history for GP model. 
   - **Joystick required **. 
   ros joystick input is used to control the vehicle manually while recording the state messages. 
   To begin the recording process, first RUN 
