@@ -5,12 +5,12 @@
 
 
 <p align='center'>
-    <img src="/jpg/hojin1" alt="drawing" width="800"/>
+    <img src="/jpg/hojin1.jpg" alt="drawing" width="800"/>
 </p>
 
 ## System architecture
 <p align='center'>
-    <img src="/jpg/hojin2" alt="drawing" width="800"/>
+    <img src="/jpg/hojin2.jpg" alt="drawing" width="800"/>
 </p>
 
 
