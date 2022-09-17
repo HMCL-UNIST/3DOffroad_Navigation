@@ -2,9 +2,8 @@
 
 **A safe, efficient, and agile ground vehicle navigation algorithm for 3D off-road terrain environments. A video of the demonstration of the method can be found on [YouTube](https://www.youtube.com/watch).**
 
-<p align='center'>
-    <img src="./config/doc/demo.gif" alt="drawing" width="800"/>
-</p>
+![image](https://user-images.githubusercontent.com/32535170/190854894-3dd5b341-b4f7-42c2-9777-a48194f8adce.png)
+
 
 <p align='center'>
     <img src="./config/doc/device-hand-2.png" alt="drawing" width="200"/>
