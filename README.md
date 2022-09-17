@@ -1,10 +1,6 @@
-# offroad_navigation
-learning based uncertainty-aware 3D offroad navigation
+# learning based uncertainty-aware 3D offroad navigation
 
-
-# LIO-SAM
-
-**A real-time lidar-inertial odometry package. We strongly recommend the users read this document thoroughly and test the package with the provided dataset first. A video of the demonstration of the method can be found on [YouTube](https://www.youtube.com/watch?v=A0H8CoORZJU).**
+**A safe, efficient, and agile ground vehicle navigation algorithm for 3D off-road terrain environments. A video of the demonstration of the method can be found on [YouTube](https://www.youtube.com/watch).**
 
 <p align='center'>
     <img src="./config/doc/demo.gif" alt="drawing" width="800"/>
@@ -17,58 +13,22 @@ learning based uncertainty-aware 3D offroad navigation
     <img src="./config/doc/device-livox-horizon.png" alt="drawing" width="200"/>
 </p>
 
-## Menu
-
-  - [**System architecture**](#system-architecture)
-
-  - [**Package dependency**](#dependency)
-
-  - [**Package install**](#install)
-
-  - [**Prepare lidar data**](#prepare-lidar-data) (must read)
-
-  - [**Prepare IMU data**](#prepare-imu-data) (must read)
-
-  - [**Sample datasets**](#sample-datasets)
-
-  - [**Run the package**](#run-the-package)
-
-  - [**Other notes**](#other-notes)
-
-  - [**Issues**](#issues)
-
-  - [**Paper**](#paper)
-
-  - [**TODO**](#todo)
-
-  - [**Related Package**](#related-package)
-
-  - [**Acknowledgement**](#acknowledgement)
-
 ## System architecture
 
 <p align='center'>
     <img src="./config/doc/system.png" alt="drawing" width="800"/>
 </p>
 
-We design a system that maintains two graphs and runs up to 10x faster than real-time.
-  - The factor graph in "mapOptimization.cpp" optimizes lidar odometry factor and GPS factor. This factor graph is maintained consistently throughout the whole test.
-  - The factor graph in "imuPreintegration.cpp" optimizes IMU and lidar odometry factor and estimates IMU bias. This factor graph is reset periodically and guarantees real-time odometry estimation at IMU frequency.
+We design a system that learns the terrain-induced uncertainties from driving data and encodes the learned uncertainty distribution into the
+traversability cost for path evaluation. The navigation path is then designed to optimize the uncertainty-aware traversability cost, resulting in a safe and agile vehicle maneuver.  
 
 ## Dependency
 
-This is the original ROS1 implementation of LIO-SAM. For a ROS2 implementation see branch `ros2`.
-
-- [ROS](http://wiki.ros.org/ROS/Installation) (tested with Kinetic and Melodic. Refer to [#206](https://github.com/TixiaoShan/LIO-SAM/issues/206) for Noetic)
+Tested with ROS Melodic. 
   ```
   sudo apt-get install -y ros-kinetic-navigation
   sudo apt-get install -y ros-kinetic-robot-localization
   sudo apt-get install -y ros-kinetic-robot-state-publisher
-  ```
-- [gtsam](https://gtsam.org/get_started/) (Georgia Tech Smoothing and Mapping library)
-  ```
-  sudo add-apt-repository ppa:borglab/gtsam-release-4.0
-  sudo apt install libgtsam-dev libgtsam-unstable-dev
   ```
 
 ## Install
@@ -77,39 +37,13 @@ Use the following commands to download and compile the package.
 
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/TixiaoShan/LIO-SAM.git
+git clone https://github.com/HMCL-UNIST/offroad_navigation.git 
 cd ..
-catkin_make
+catkin build 
 ```
 
-## Using Docker
-Build image (based on ROS1 Kinetic):
-
-```bash
-docker build -t liosam-kinetic-xenial .
-```
-
-Once you have the image, start a container as follows:
-
-```bash
-docker run --init -it -d \
-  -v /etc/localtime:/etc/localtime:ro \
-  -v /etc/timezone:/etc/timezone:ro \
-  -v /tmp/.X11-unix:/tmp/.X11-unix \
-  -e DISPLAY=$DISPLAY \
-  liosam-kinetic-xenial \
-  bash
-```
-
-
-## Prepare lidar data
-
-The user needs to prepare the point cloud data in the correct format for cloud deskewing, which is mainly done in "imageProjection.cpp". The two requirements are:
-  - **Provide point time stamp**. LIO-SAM uses IMU data to perform point cloud deskew. Thus, the relative point time in a scan needs to be known. The up-to-date Velodyne ROS driver should output this information directly. Here, we assume the point time channel is called "time." The definition of the point type is located at the top of the "imageProjection.cpp." "deskewPoint()" function utilizes this relative time to obtain the transformation of this point relative to the beginning of the scan. When the lidar rotates at 10Hz, the timestamp of a point should vary between 0 and 0.1 seconds. If you are using other lidar sensors, you may need to change the name of this time channel and make sure that it is the relative time in a scan.
-  - **Provide point ring number**. LIO-SAM uses this information to organize the point correctly in a matrix. The ring number indicates which channel of the sensor that this point belongs to. The definition of the point type is located at the top of "imageProjection.cpp." The up-to-date Velodyne ROS driver should output this information directly. Again, if you are using other lidar sensors, you may need to rename this information. Note that only mechanical lidars are supported by the package currently.
-
-## Record vehicle state data for GP model of vehicle-terrain intercation 
-
+## Record vehicle state data for GP model 
+Record state history to estimate vehicle-terrain intercation using Gaussian Process regression model. 
   - **Joystick required **. 
   ros joystick input is used to control the vehicle manually while recording the state messages. 
   To begin the recording process, first RUN 
@@ -120,13 +54,6 @@ To enable data logging
 << publish topic  /gp_data_logging as "true" >>
 To Save data   
 << publish topic  /gp_data_save as "true" >>
-
-<p align='center'>
-    <img src="./config/doc/imu-transform.png" alt="drawing" width="800"/>
-</p>
-<p align='center'>
-    <img src="./config/doc/imu-debug.gif" alt="drawing" width="800"/>
-</p>
 
 
 ## Run the package
@@ -160,7 +87,7 @@ roslaunch lowlevel_ctrl lowlevel_ctrl.launch
 
 
 ## Paper 
-2023 ICRA, under review 
+Hojin Lee, Junsung Kwon, and Cheolhyeon Kwon, Learning-based Uncertainty-aware Navigation in 3D Off-Road Terrains, 2023 ICRA, under review 
 
 
 ## Acknowledgement
