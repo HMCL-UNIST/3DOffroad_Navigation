@@ -5,14 +5,14 @@
 
 
 <p align='center'>
-    <img src="[./config/doc/device-hand-2.png](https://user-images.githubusercontent.com/32535170/190854894-3dd5b341-b4f7-42c2-9777-a48194f8adce.png)" alt="drawing" width="200"/>
+    <img src="/jpg/hojin1" alt="drawing" width="800"/>
 </p>
 
 ## System architecture
-
 <p align='center'>
-    <img src="./config/doc/system.png" alt="drawing" width="800"/>
+    <img src="/jpg/hojin2" alt="drawing" width="800"/>
 </p>
+
 
 We design a system that learns the terrain-induced uncertainties from driving data and encodes the learned uncertainty distribution into the
 traversability cost for path evaluation. The navigation path is then designed to optimize the uncertainty-aware traversability cost, resulting in a safe and agile vehicle maneuver.  
