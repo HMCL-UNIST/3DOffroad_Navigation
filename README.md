@@ -90,7 +90,7 @@ Hojin Lee, Junsung Kwon, and Cheolhyeon Kwon, Learning-based Uncertainty-aware N
 
 
 ## Acknowledgement
-* I would like to express my sincere thanks to following
+ **I would like to express my sincere thanks to following**
 
 - Our 3D Simulation environment and the Gazebo vehicle model is based on Autorally research platform  
 
