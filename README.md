@@ -55,12 +55,14 @@ Record state history for GP model.
   ros joystick input is used to control the vehicle manually while recording the state messages. 
   To begin the recording process, first RUN 
   ```
+    roslaunch autorally_gazebo gpmppi3d.launch
     roslaunch gplogger gplogger.launch
+    roslaunch lowlevel_ctrl lowlevel_ctrl.launch
   ```
 To enable data logging  
-<< publish topic  /gp_data_logging as "true" >>
+1. publish topic  /gp_data_logging as "true" 
 To Save data   
-<< publish topic  /gp_data_save as "true" >>
+2. publish topic  /gp_data_save as "true" 
 
 
 ## Run the package
