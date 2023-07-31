@@ -98,7 +98,7 @@ roslaunch lowlevel_ctrl lowlevel_ctrl.launch
 
 
 ## Paper 
-Hojin Lee, Junsung Kwon, and Cheolhyeon Kwon, Learning-based Uncertainty-aware Navigation in 3D Off-Road Terrains, 2023 ICRA, under review 
+Hojin Lee, Junsung Kwon, and Cheolhyeon Kwon, Learning-based Uncertainty-aware Navigation in 3D Off-Road Terrains, 2023 ICRA
 
 
 ## Acknowledgement
