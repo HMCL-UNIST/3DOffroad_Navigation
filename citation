@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "UncertaintyAwareNavigation."
+authors:
+  - family-names: Lee
+    given-names: Hojin
+    orcid: https://orcid.org/0000-0003-4325-3262
+title: "UncertaintyAwareNavigation"
+version: 1.0.1
+doi: 10.1109/ICRA48891.2023.10161543
+date-released: 2023-06-02
